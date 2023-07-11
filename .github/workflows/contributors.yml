@@ -7,9 +7,9 @@ jobs:
       # Check out code using git
       - uses: actions/checkout@v2
       # Install Node 12
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
-          version: 12
+          node-version: 16
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm install @octokit/action
