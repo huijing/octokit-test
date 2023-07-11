@@ -5,10 +5,10 @@ const octokit = new Octokit();
 
 async function test() {
   const { data } = await octokit.request(
-    "GET /repos/huijing/tools/collaborators",
+    "GET /repos/huijing/octokit-test/collaborators",
     {
       owner: "huijing",
-      repo: "tools",
+      repo: "octokit-test",
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
