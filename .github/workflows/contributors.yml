@@ -10,9 +10,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           version: 12
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm install @octokit/action
       # Node.js script can be anywhere. A good convention is to put local GitHub Actions
       # into the `.github/actions` folder
       - run: node .github/actions/get-contributors.js
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
