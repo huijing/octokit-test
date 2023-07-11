@@ -5,10 +5,10 @@ const octokit = new Octokit();
 
 async function test() {
   const { data } = await octokit.request(
-    "GET /repos/wicg/webmonetization/collaborators",
+    "GET /repos/huijing/tools/collaborators",
     {
-      owner: "wicg",
-      repo: "webmonetization",
+      owner: "huijing",
+      repo: "tools",
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
