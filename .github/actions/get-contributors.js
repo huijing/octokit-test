@@ -1,5 +1,5 @@
-import { Octokit } from "octokit";
-import { writeFileSync } from "fs";
+const { Octokit } = require("@octokit/action");
+const fs = require("fs");
 
 const octokit = new Octokit();
 
@@ -15,7 +15,7 @@ async function test() {
     }
   );
   const contributors = JSON.stringify(data);
-  writeFileSync(
+  fs.writeFileSync(
     "../../static/contributor-data/contributors.json",
     contributors
   );
