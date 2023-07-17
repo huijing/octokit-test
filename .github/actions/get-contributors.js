@@ -15,7 +15,7 @@ async function test() {
     }
   );
   const contributors = JSON.stringify(data);
-  fs.writeFileSync("static/contributor-data/contributors.json", contributors);
+  fs.writeFileSync("src/data/contributors.json", contributors);
 }
 
 test();
