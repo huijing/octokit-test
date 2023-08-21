@@ -1,5 +1,5 @@
-const { Octokit } = require("@octokit/action");
-const fs = require("fs");
+import Octokit from "@octokit/action";
+import fs from "fs";
 
 const octokit = new Octokit();
 
