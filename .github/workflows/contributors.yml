@@ -31,4 +31,4 @@ jobs:
 
       - name: Create pull request
         run: |
-          gh pr create -B main -H bot/update-contributors --title 'chore: update contributors data' --body 'This PR updates the contributors.json file used to display contributors on the home page.'
+          gh pr create -B main -H bot/update-contributors-${{ env.NOW }} --title 'chore: update contributors data' --body 'This PR updates the contributors.json file used to display contributors on the home page.'
