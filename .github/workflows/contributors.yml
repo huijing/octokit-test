@@ -22,4 +22,5 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git push --set-upstream origin bot/update-contributors
       - name: create pull request
-        run: gh pr create -B main -H bot/update-contributors --title 'Update contributors data' --body 'Created by Github action'
+        run: |
+          gh pr create -B main -H bot/update-contributors --title 'chore: update contributors data' --body 'This PR updates the contributors.json file used to display contributors on the home page.'
